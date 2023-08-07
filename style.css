@@ -1,12 +1,13 @@
 * {
-
     font-family:'Hanken Grotesk';
+    border: 1px solid;
+    border-color: blueviolet;
 }
 
 .header {
     background-color: rgb(5, 113, 113);
     text-align: center;
-    color: aliceblue;
+    color: whitesmoke;
     line-height: 2;
 }
 
@@ -43,4 +44,18 @@
 #break {
     width: 177px;
     position: absolute;
+}
+
+.current-city-container {
+display: flex;    
+background-color: whitesmoke;
+border: 1px solid;
+border-color: black;
+height: 150px;
+margin-top: 50px;
+align-self: flex-start;
+}
+
+#current-city-content {
+
 }
