@@ -54,6 +54,8 @@ border-color: black;
 height: 150px;
 margin-top: 50px;
 align-self: flex-start;
+margin-left: auto;
+margin-right: auto;
 }
 
 #current-city-content {
