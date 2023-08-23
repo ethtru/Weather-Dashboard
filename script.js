@@ -11,6 +11,7 @@ function searchCurrentWeather(city) {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
   )
     .then(function (res) {
+        console.log(res);
       return res.json();
     })
     .then(function (data) {
@@ -22,13 +23,13 @@ function searchCurrentWeather(city) {
       cityHeader.appendChild(cityIcon);
       currentWeatherContainer.appendChild(cityHeader);
       const cityTemp = document.createElement("p");
-      cityTemp.textContent = `temperature:${data.main.temp}`;
+      cityTemp.textContent = `temperature: ${data.main.temp}`;
       currentWeatherContainer.appendChild(cityTemp);
       const cityHumidity = document.createElement("p");
-      cityHumidity.textContent = `humidity:${data.main.humidity}`;
+      cityHumidity.textContent = `humidity: ${data.main.humidity}`;
       currentWeatherContainer.appendChild(cityHumidity);
       const cityWind = document.createElement("p");
-      cityWind.textContent = `wind speed:${data.wind.speed}`;
+      cityWind.textContent = `wind speed: ${data.wind.speed}`;
       currentWeatherContainer.appendChild(cityWind);
       getFiveDayForecast(city);
     });
@@ -43,6 +44,8 @@ function getFiveDayForecast(city) {
     })
     .then(function (res) {
       console.log(res);
+        //in the for loop, create a div element. add a class (element.classList.add("mystyle"); would do this five tiems for each div
+      
       for (let i = 0; i < res.list.length; i += 8) {
         const data = res.list[i];
         const cityHeader = document.createElement("h1");
@@ -52,17 +55,19 @@ function getFiveDayForecast(city) {
         cityHeader.appendChild(cityIcon);
         forecastWeatherContainer.appendChild(cityHeader);
         const cityTemp = document.createElement("p");
-        cityTemp.textContent = `temperature:${data.main.temp}`;
+        cityTemp.textContent = `temperature: ${data.main.temp}`;
         forecastWeatherContainer.appendChild(cityTemp);
         const cityHumidity = document.createElement("p");
-        cityHumidity.textContent = `humidity:${data.main.humidity}`;
+        cityHumidity.textContent = `humidity: ${data.main.humidity}`;
         forecastWeatherContainer.appendChild(cityHumidity);
         const cityWind = document.createElement("p");
-        cityWind.textContent = `wind speed:${data.wind.speed}`;
+        cityWind.textContent = `wind speed: ${data.wind.speed}`;
         forecastWeatherContainer.appendChild(cityWind);
       }
     });
 }
+
+
 
 searchForm.addEventListener("submit", function (event) {
   event.preventDefault();

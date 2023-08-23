@@ -51,13 +51,49 @@ display: flex;
 background-color: whitesmoke;
 border: 1px solid;
 border-color: black;
-height: 150px;
+height: 200px;
+width: 400px;
 margin-top: 50px;
 align-self: flex-start;
 margin-left: auto;
 margin-right: auto;
+overflow: scroll;
+
 }
 
 #current-city-content {
 
+    padding: 5px;
+    
+}
+
+#forcast-city-container {
+display: flex;    
+background-color: whitesmoke;
+border: 1px solid;
+border-color: black;
+height: 200px;
+width: 800px;
+margin-top: 50px;
+justify-content: flex-start;
+margin-left: 0;
+margin-right: auto;
+overflow: scroll;
+}
+
+#forecast-city-content {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+#weather-container {
+    display: flex;
+    flex-direction: column;
+}
+#search-container {
+    margin-right: -500px;
+    /* width: 500px; */
+    height: 100%;
 }
