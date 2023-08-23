@@ -1,7 +1,7 @@
 * {
     font-family:'Hanken Grotesk';
-    border: 1px solid;
-    border-color: blueviolet;
+    /* border: 1px solid;
+    border-color: blueviolet; */
 }
 
 .header {
@@ -48,7 +48,8 @@
 
 .current-city-container {
 display: flex;    
-background-color: whitesmoke;
+background-color: rgb(5, 113, 113);
+color: white;
 border: 1px solid;
 border-color: black;
 height: 200px;
@@ -91,9 +92,21 @@ overflow: scroll;
 #weather-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-left: 200px;
+
 }
 #search-container {
     margin-right: -500px;
     /* width: 500px; */
     height: 100%;
+}
+
+.day-forecast {
+    overflow: scroll;
+    background-color: rgb(5, 113, 113);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+
 }
