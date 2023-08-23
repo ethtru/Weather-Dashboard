@@ -20,6 +20,8 @@ const nextDay = new Date(today);
 nextDay.setDate(today.getDate() + 1);
 
 function searchCurrentWeather(city) {
+  forecastWeatherContainer.innerHTML = "";
+  currentWeatherContainer.innerHTML = "";
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
   )
