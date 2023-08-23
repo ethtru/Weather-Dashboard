@@ -60,6 +60,7 @@ align-self: flex-start;
 margin-left: auto;
 margin-right: auto;
 overflow: scroll;
+box-shadow: 10px 10px;
 
 }
 
@@ -81,6 +82,7 @@ justify-content: flex-start;
 margin-left: 0;
 margin-right: auto;
 overflow: scroll;
+
 }
 
 #forecast-city-content {
@@ -95,6 +97,7 @@ overflow: scroll;
     flex-direction: column;
     width: 100%;
     margin-left: 200px;
+    box-shadow: 10px 10px;
 
 }
 #search-container {
@@ -109,5 +112,6 @@ overflow: scroll;
     color: white;
     padding: 5px;
     margin: 5px;
+    box-shadow: 3px 3px gray;
 
 }
