@@ -65,7 +65,7 @@ function getFiveDayForecast(city) {
         const data = res.list[i];
         const dayDiv = document.createElement("div");
         dayDiv.classList.add("day-forecast");
-        const cityHeader = document.createElement("h1");
+        const cityHeader = document.createElement("h3");
         cityHeader.textContent = city;
         const timestamp = data.dt * 1000;
         const date = new Date(timestamp);
